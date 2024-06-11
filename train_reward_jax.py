@@ -32,7 +32,12 @@ from transformers import AutoTokenizer, FlaxAutoModelForCausalLM, GenerationConf
 # TODO: Add current directory to path
 import sys
 sys.path.insert(0, '')
-from .data import DATASET
+
+
+if os.path.dirname(__file__) == os.path.abspath(os.curdir):
+    from data import DATASET
+else:
+    from .data import DATASET
 
 
 @dataclass
