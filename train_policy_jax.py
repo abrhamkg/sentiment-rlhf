@@ -28,7 +28,7 @@ from torch.utils.data import DataLoader, IterableDataset
 from torch.utils.tensorboard import SummaryWriter
 from transformers import AutoTokenizer, FlaxAutoModelForCausalLM, GenerationConfig
 
-from data import DATASET
+from .data import DATASET
 
 
 @dataclass
